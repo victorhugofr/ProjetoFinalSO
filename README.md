@@ -48,7 +48,7 @@ Logo após, digite:
 ```bash
 java Main
 ```
-##### WARNING:
+##### ATENCAO!:
 
 é importante que o arquivo entrada.txt esteja na mesma pasta do src.
 
