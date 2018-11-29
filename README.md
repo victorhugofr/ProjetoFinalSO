@@ -61,17 +61,17 @@ Exemplo de arquivo de configuração:
 Exemplo de saida:
 ```bash
 FCFS
-Ordem: 53, 98, 183, 37, 122, 14, 124, 65, 67
- Cilindros: 640
+    Ordem: 53, 98, 183, 37, 122, 14, 124, 65, 67
+    Cilindros: 640
 SSTF
-Ordem: 53, 65, 67, 37, 14, 98, 122, 124, 183
-Cilindros: 236
+    Ordem: 53, 65, 67, 37, 14, 98, 122, 124, 183
+    Cilindros: 236
 SCAN SOBE
-Ordem: 53, 37, 14, 65, 67, 98, 122, 124, 183
-Cilindros: 208
+    Ordem: 53, 37, 14, 65, 67, 98, 122, 124, 183
+    Cilindros: 208
 SCAN DESCE
-Ordem: 53, 65, 67, 98, 122, 124, 183, 37, 14
-Cilindros: 299
+    Ordem: 53, 65, 67, 98, 122, 124, 183, 37, 14
+    Cilindros: 299
 ```
 ## Autor
  
