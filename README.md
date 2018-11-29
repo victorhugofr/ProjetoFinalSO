@@ -36,7 +36,9 @@ na tela:
 2) O total de cilindros percorridos
 
 ## Como executar
-Digite no terminal:
+O arquivo entrada.txt contem as configurações iniciais, para quaisquer alterações, modifique-o.
+
+Dentro da pasta src, digite no terminal:
 
 ```bash
 javac Main.java
@@ -46,6 +48,9 @@ Logo após, digite:
 ```bash
 java Main
 ```
+##### WARNING:
+
+é importante que o arquivo entrada.txt esteja na mesma pasta do src.
 
 ## Autor
  
