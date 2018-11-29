@@ -52,6 +52,27 @@ java Main
 
 é importante que o arquivo entrada.txt esteja na mesma pasta do src.
 
+Exemplo de arquivo de configuração:
+```bash
+53
+8
+98 183 37 122 14 124 65 67
+```
+Exemplo de saida:
+```bash
+FCFS
+Ordem: 53, 98, 183, 37, 122, 14, 124, 65, 67
+ Cilindros: 640
+SSTF
+Ordem: 53, 65, 67, 37, 14, 98, 122, 124, 183
+Cilindros: 236
+SCAN SOBE
+Ordem: 53, 37, 14, 65, 67, 98, 122, 124, 183
+Cilindros: 208
+SCAN DESCE
+Ordem: 53, 65, 67, 98, 122, 124, 183, 37, 14
+Cilindros: 299
+```
 ## Autor
  
 - [_Victor Hugo_](https://github.com/victorhugofr).
