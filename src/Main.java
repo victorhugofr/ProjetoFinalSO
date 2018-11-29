@@ -93,14 +93,14 @@ public class Main {
 		int[] resto2=new int[resto.length+1];
 		resto2[0]=comeco;
 		int cilindros=0,aux;
-		int currentPosition=resto2[0];
+		int posatual=resto2[0];
 		System.out.println("scanSobe");
 		System.out.print("        Ordem: ");
 		for(int z=0;z<resto.length;z++) {
 			resto2[z+1]=Integer.parseInt(resto[z]);
 		}
-		  int i, j;
-		    int greatestDiff = -1;
+		  	int i, j;
+		    int maiordiferenca = -1;
 		    int goingToBottom = 1;
 
 		    int menor = achaMenor(comeco, resto);
@@ -112,7 +112,7 @@ public class Main {
 		                if (resto2[j] == menor){
 		                    goingToBottom = 0;
 		                }
-		                if (resto2[j] < currentPosition){
+		                if (resto2[j] < posatual){
 		                    aux = resto2[j];
 		                    resto2[j] = resto2[i];
 		                    resto2[i] = aux;
@@ -120,17 +120,17 @@ public class Main {
 		                }
 		            }
 		            else{
-		                if (maior - resto2[j] > greatestDiff){
-		                    greatestDiff = maior - resto2[j];
+		                if (maior - resto2[j] > maiordiferenca){
+		                    maiordiferenca = maior - resto2[j];
 		                    aux = resto2[j];
 		                    resto2[j] = resto2[i];
 		                    resto2[i] = aux;
 		                }
 		            }   
 		        }
-		        cilindros += (Math.abs(currentPosition - resto2[i]));
-		        currentPosition = resto2[i];
-		        greatestDiff = -1;
+		        cilindros += (Math.abs(posatual - resto2[i]));
+		        posatual = resto2[i];
+		        maiordiferenca = -1;
 		    }
 		    for(int p=0;p<resto2.length;p++) {
 				if(p==0)
@@ -149,7 +149,7 @@ public class Main {
 		int[] resto2=new int[resto.length+1];
 		resto2[0]=comeco;
 		int cilindros=0,aux;
-		int currentPosition=resto2[0];
+		int posatual=resto2[0];
 		System.out.println("scanDesce");
 		System.out.print("        Ordem: ");
 		for(int z=0;z<resto.length;z++) {
@@ -157,29 +157,21 @@ public class Main {
 		}
 		  int i, j;
 		    int greatestDiff = -1;
-		    int goingToBottom = 1;
 		    int goingToTop = 1;
-		    int menor = achaMenor(comeco, resto);
 		    int maior = achaMaior(comeco, resto);
 
-		    for (i = 1; i < resto2.length; i++)
-		    {
-		        for (j = i; j < resto2.length; j++)
-		        {
-		            if (goingToTop == 1)
-		            {
-		                if (resto2[j] > currentPosition && Math.abs(maior - resto2[j]) > greatestDiff)
-		                {
+		    for (i = 1; i < resto2.length; i++){
+		        for (j = i; j < resto2.length; j++){
+		            if (goingToTop == 1){
+		                if (resto2[j] > posatual && Math.abs(maior - resto2[j]) > greatestDiff){
 		                    greatestDiff = maior - resto2[j];
 		                    aux = resto2[j];
 		                    resto2[j] = resto2[i];
 		                    resto2[i] = aux;
 		                }
 		            }
-		            else
-		            {
-		                if (resto2[j] > greatestDiff)
-		                {
+		            else{
+		                if (resto2[j] > greatestDiff){
 		                    greatestDiff = resto2[j];
 		                    aux = resto2[j];
 		                    resto2[j] = resto2[i];
@@ -192,8 +184,8 @@ public class Main {
 		            goingToTop = 0;
 		        }
 
-		        cilindros += Math.abs(currentPosition - resto2[i]);
-		        currentPosition = resto2[i];
+		        cilindros += Math.abs(posatual - resto2[i]);
+		        posatual = resto2[i];
 		        greatestDiff = -1;
 		    }
 		    for(int p=0;p<resto2.length;p++) {
