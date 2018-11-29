@@ -35,6 +35,18 @@ na tela:
 
 2) O total de cilindros percorridos
 
+## Como executar
+Digite no terminal:
+
+```bash
+javac Main.java
+```
+Logo após, digite:
+
+```bash
+java Main
+```
+
 ## Autor
  
 - [_Victor Hugo_](https://github.com/victorhugofr).
